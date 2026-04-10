@@ -19,6 +19,18 @@ pub const MODULUS_LE_BYTES: [u8; 32] = [
     1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 0, 0, 0, 8,
 ];
 
+impl AsRef<Felt> for Felt {
+    fn as_ref(&self) -> &Felt {
+        self
+    }
+}
+
+impl AsRef<[u8; 32]> for Felt {
+    fn as_ref(&self) -> &[u8; 32] {
+        &self.0
+    }
+}
+
 impl Felt {
     pub const ZERO: Felt = Felt([0u8; 32]);
     pub const ONE: Felt = Self::from_u64(1);

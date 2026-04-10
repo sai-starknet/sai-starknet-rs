@@ -1,5 +1,5 @@
 [workspace]
-members = ["crates/felt"]
+members = ["crates/felt", "crates/types", "crates/provider"]
 
 
 [workspace.package]
@@ -13,9 +13,31 @@ assert_matches = "1.5.0"
 bincode = { version = "2.0.0", features = ["serde"] }
 pretty_assertions_sorted = "1.2.3"
 serde = { version = "1.0.160", features = ["derive"] }
+serde_with = { version = "3.9.0", default-features = false }
 serde_json = "1.0"
 starknet = "0.17.0"
 starknet-types-core = "0.2.0"
+num-traits = { version = "0.2.19", default-features = false }
+hex = { version = "0.4.3", default-features = false }
+hex-literal = "0.4.1"
+base64 = { version = "0.21.0", default-features = false }
+crypto-bigint = { version = "0.5.1", default-features = false }
+sha3 = { version = "0.10.7", default-features = false }
+indexmap = { version = "2.7.0", default-features = false }
+async-trait = "0.1.68"
+auto_impl = "1.0.1"
+ethereum-types = "0.14.1"
+flate2 = "1.0.25"
+log = "0.4.19"
+url = "2.3.1"
+thiserror = "1.0.40"
+reqwest = { version = "0.12.15", default-features = false }
+tokio = "1.27.0"
+
+sai-felt = { path = "crates/felt" }
+sai-starknet-types = { path = "crates/types" }
+sai-starknet-provider = { path = "crates/provider" }
+
 
 [workspace.lints.rust]
 # Deny unsafe code unless explicitly allowed
