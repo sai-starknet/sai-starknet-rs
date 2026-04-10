@@ -1,6 +1,6 @@
 [workspace]
 members = ["crates/felt", "crates/types", "crates/provider"]
-
+resolver = "2"
 
 [workspace.package]
 repository = "http://github.com/sai-starknet/sai-starknet-rs"
