@@ -53,10 +53,6 @@ pub use codegen::{
     TransactionTraceWithHash, TransactionWithL2Status, TransactionWithReceipt,
 };
 
-/// Module containing the [`U256`] type.
-// pub mod u256;
-// pub use u256::U256;
-
 /// Module containing the [`EthAddress`] type.
 pub mod eth_address;
 pub use eth_address::EthAddress;
@@ -80,16 +76,8 @@ pub use msg::MsgToL2;
 mod call;
 pub use call::Call;
 
-// mod byte_array;
-// pub use byte_array::ByteArray;
-
-// TODO: move generated request code to `starknet-providers`
 /// Module containing JSON-RPC request types.
 pub mod requests;
-
-// /// Module containing types related to Starknet contracts/classes.
-// pub mod contract;
-// pub use contract::ContractArtifact;
 
 mod types;
 pub use types::{

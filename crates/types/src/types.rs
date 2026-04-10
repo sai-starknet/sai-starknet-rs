@@ -827,15 +827,15 @@ mod tests {
     fn test_felt_to_string() {
         let felt = Felt::from_dec_str("123456").unwrap();
 
-        assert_eq!(format!("{felt}"), "1e240");
+        assert_eq!(format!("{felt}"), "123456");
         assert_eq!(format!("{felt:x}"), "1e240");
         assert_eq!(format!("{felt:X}"), "1E240");
         assert_eq!(format!("{felt:#x}"), "0x1e240");
         assert_eq!(format!("{felt:#X}"), "0x1E240");
         assert_eq!(format!("{felt:010x}"), "000001e240");
         assert_eq!(format!("{felt:010X}"), "000001E240");
-        assert_eq!(format!("{felt:#010x}"), "0x000001e240");
-        assert_eq!(format!("{felt:#010X}"), "0x000001E240");
+        assert_eq!(format!("{felt:#010x}"), "0x0001e240");
+        assert_eq!(format!("{felt:#010X}"), "0x0001E240");
     }
 
     #[test]

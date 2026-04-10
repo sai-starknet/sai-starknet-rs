@@ -76,7 +76,7 @@ mod fmt {
         let felt = Felt::from_hex(hex_str).unwrap();
         let result = format!("{felt:?}");
 
-        let expected = format!("0x{felt}");
+        let expected = format!("0x{felt:x}");
 
         assert_eq!(result, expected);
     }
