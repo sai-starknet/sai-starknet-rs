@@ -8,6 +8,14 @@ edition = "2021"
 license = "MIT"
 authors = ["Bengineer <blockengineer42@gmail.com>"]
 
+[package]
+name = "sai-starknet"
+version = "0.1.0"
+repository.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
 [workspace.dependencies]
 assert_matches = "1.5.0"
 bincode = { version = "2.0.0", features = ["serde"] }
@@ -42,3 +50,10 @@ sai-starknet-provider = { path = "crates/provider" }
 [workspace.lints.rust]
 # Deny unsafe code unless explicitly allowed
 unsafe_code = "warn"
+
+[dependencies]
+sai-felt.workspace = true
+sai-starknet-types.workspace = true
+sai-starknet-provider.workspace = true
+
+[lib]
